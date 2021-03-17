@@ -72,80 +72,12 @@ public class RobotContainer {
     // An ExampleCommand will run in autonomous
 
     List<double[]> coordinates;
-
-    // Path A
-
-    // if (SmartDashboard.getNumber("Radius", 1) >= Constants.ballRadius) {
-    //   coordinates = new ArrayList<double[]>();
-    //   coordinates.add(new double[]{0d, 2.8d});
-    //   coordinates.add(new double[]{1.3d, 4.8d});
-    //   coordinates.add(new double[]{-2d, 5.8d});
-    //   coordinates.add(new double[]{0d, 11d});
-    // }
-    // else {
-    //   coordinates = new ArrayList<double[]>();
-    //   coordinates.add(new double[]{0d, 3d});
-    //   coordinates.add(new double[]{2.27d, 5.7d});
-    //   coordinates.add(new double[]{-1.1d, 7d});
-    //   coordinates.add(new double[]{0.5d, 9d});
-    //   coordinates.add(new double[]{0d, 11d});
-    // }
-
-
     coordinates = new ArrayList<double[]>();
-    coordinates.add(new double[]{0d, 2.8d});
-    coordinates.add(new double[]{1.3d, 4.8d});
-    coordinates.add(new double[]{-2d, 5.8d});
-    coordinates.add(new double[]{0d, 11d});
+    coordinates.add(new double[]{-3.5d, 1d});
+    coordinates.add(new double[]{1d, 5.8d});
+    coordinates.add(new double[]{4.2d, 6.8d});
 
     return new CoordinateFollowingCommand(this.driveSubsystem, coordinates);
-
-    // Path B
-
-    // if (SmartDashboard.getNumber("Radius", 1) >= Constants.ballRadius) {
-    //   coordinates = new ArrayList<double[]>();
-    //   coordinates.add(new double[]{0d, 2.6d});
-    //   coordinates.add(new double[]{2.4d, 5d});
-    //   coordinates.add(new double[]{0d, 6.7d});
-    //   coordinates.add(new double[]{0.4d, 11d});
-    // }
-    // else {
-    //   coordinates = new ArrayList<double[]>();
-    //   coordinates.add(new double[]{2.25d, 6d});
-    //   coordinates.add(new double[]{-0.3d, 8d});
-    //   coordinates.add(new double[]{2.2d, 10d});
-    //   coordinates.add(new double[]{2d, 11d});
-    // }
-
-    // AR
-    // List<double[]> coordinates = new ArrayList<double[]>();
-    // coordinates.add(new double[]{0d, 2.8d});
-    // coordinates.add(new double[]{1.3d, 4.8d});
-    // coordinates.add(new double[]{-2d, 5.8d});
-    // coordinates.add(new double[]{0d, 11d});
-
-    // AB
-    // List<double[]> coordinates = new ArrayList<double[]>();
-    // coordinates.add(new double[]{0d, 3d});
-    // coordinates.add(new double[]{2.27d, 5.7d});
-    // coordinates.add(new double[]{-1.1d, 7d});
-    // coordinates.add(new double[]{0.5d, 9d});
-    // coordinates.add(new double[]{0d, 11d});
-
-    // BR, B = 0, start the robot on B1
-    // List<double[]> coordinates = new ArrayList<double[]>();
-    // coordinates.add(new double[]{0d, 2.6d});
-    // coordinates.add(new double[]{2.4d, 5d});
-    // coordinates.add(new double[]{0d, 67d});
-    // coordinates.add(new double[]{0.4d, 11d});
-
-    // BB, B = 0, start the robot on B1
-    // List<double[]> coordinates = new ArrayList<double[]>();
-    // coordinates.add(new double[]{0d, 1.5d});
-    // coordinates.add(new double[]{2.25d, 6d});
-    // coordinates.add(new double[]{-0.3d, 8d});
-    // coordinates.add(new double[]{2.35d, 10d});
-    // coordinates.add(new double[]{2d, 11d});
   }
 
   public static double getY(Joystick joy, double deadband) {
