@@ -75,30 +75,21 @@ public class RobotContainer {
 
     // Path A
 
-    // if (SmartDashboard.getNumber("Radius", 1) >= Constants.ballRadius) {
-    //   coordinates = new ArrayList<double[]>();
-    //   coordinates.add(new double[]{0d, 2.8d});
-    //   coordinates.add(new double[]{1.3d, 4.8d});
-    //   coordinates.add(new double[]{-2d, 5.8d});
-    //   coordinates.add(new double[]{0d, 11d});
-    // }
-    // else {
-    //   coordinates = new ArrayList<double[]>();
-    //   coordinates.add(new double[]{0d, 3d});
-    //   coordinates.add(new double[]{2.27d, 5.7d});
-    //   coordinates.add(new double[]{-1.1d, 7d});
-    //   coordinates.add(new double[]{0.5d, 9d});
-    //   coordinates.add(new double[]{0d, 11d});
-    // }
-
-
-    coordinates = new ArrayList<double[]>();
-    coordinates.add(new double[]{0d, 2.8d});
-    coordinates.add(new double[]{1.3d, 4.8d});
-    coordinates.add(new double[]{-2d, 5.8d});
-    coordinates.add(new double[]{0d, 11d});
-
-    return new CoordinateFollowingCommand(this.driveSubsystem, coordinates);
+    if (SmartDashboard.getNumber("Radius", 1) >= Constants.ballRadius) {
+      coordinates = new ArrayList<double[]>();
+      coordinates.add(new double[]{0d, 2.8d});
+      coordinates.add(new double[]{1.3d, 4.8d});
+      coordinates.add(new double[]{-2d, 5.8d});
+      coordinates.add(new double[]{0d, 11d});
+    }
+    else {
+      coordinates = new ArrayList<double[]>();
+      coordinates.add(new double[]{0d, 3d});
+      coordinates.add(new double[]{2.27d, 5.7d});
+      coordinates.add(new double[]{-1.1d, 7d});
+      coordinates.add(new double[]{0.5d, 9d});
+      coordinates.add(new double[]{0d, 11d});
+    }
 
     // Path B
 
@@ -146,6 +137,8 @@ public class RobotContainer {
     // coordinates.add(new double[]{-0.3d, 8d});
     // coordinates.add(new double[]{2.35d, 10d});
     // coordinates.add(new double[]{2d, 11d});
+    
+    return new CoordinateFollowingCommand(this.driveSubsystem, coordinates);
   }
 
   public static double getY(Joystick joy, double deadband) {
